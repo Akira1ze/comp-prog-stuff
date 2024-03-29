@@ -1,0 +1,13 @@
+class Solution:
+def isAnagram(self, s: str, t: str) -> bool:
+  if len(s) != len(t) //checking if the length of string s is equal to string t//
+    return false //if it isnt then return false//
+countT,countS= {},{} //initializing 2 hashmaps counts and countt//
+for i in range (len(s)): //for any i in range of s// 
+    countS[s[i]] = 1+ countS.get(s[i],0) // add +1 everytime an alphabet is present in it//
+    countT[t[i]] = 1+ countT.get(t[i],0) // ''//
+for c in countS:
+  if countS[c] =! countT.get(c,0) // if the count of S is not equal to the count that we got in T//
+    return False // return false//
+
+Return True //else return true//
